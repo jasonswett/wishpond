@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Interval do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "when value is not present" do
+    it "is not valid" do
+      expect(Interval.new(value: " ")).not_to be_valid
+    end
+  end
 end
