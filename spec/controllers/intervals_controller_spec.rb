@@ -47,9 +47,10 @@ describe IntervalsController do
   end
 
   describe "GET new" do
-    it "assigns a new interval as @interval" do
-      get :new, {}, valid_session
-      assigns(:interval).should be_a_new(Interval)
+    it "assigns all intervals as @intervals" do
+      interval = Interval.create! valid_attributes
+      get :index, {}, valid_session
+      assigns(:intervals).should eq([interval])
     end
   end
 
