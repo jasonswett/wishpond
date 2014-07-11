@@ -1,9 +1,11 @@
 class @Interval
   constructor: (@value) ->
-  save: ->
+  save: (table) ->
     $.ajax
       type: "POST"
       url: "/intervals"
       data:
         interval:
           value: @value
+      success: (data) =>
+        table.append "<tr><td>#{@value}</td></tr>"

@@ -2,7 +2,7 @@
 
 <%= button_tag "Click Me", id: "record_interval_button" %>
 
-<table>
+<table id="intervals">
   <tr><th>Value</th></tr>
   <% @intervals.each do |interval| %>
     <tr><td><%= interval.value %></td></tr>
