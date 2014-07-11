@@ -11,3 +11,6 @@ class @Counter
 
     @count = @starting_number
     @counter = setInterval(decrement, 1000)
+
+  current_value: ->
+    @count

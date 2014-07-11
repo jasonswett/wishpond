@@ -1,5 +1,9 @@
 class @Interval
   constructor: (@value) ->
-
   save: ->
-    console.log @value
+    $.ajax
+      type: "POST"
+      url: "/intervals"
+      data:
+        interval:
+          value: @value
