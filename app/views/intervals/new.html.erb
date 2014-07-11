@@ -1,3 +1,10 @@
 <div id="counter_value"></div>
 
 <%= button_tag "Click Me", id: "record_interval_button" %>
+
+<table>
+  <tr><th>Value</th></tr>
+  <% @intervals.each do |interval| %>
+    <tr><td><%= interval.value %></td></tr>
+  <% end %>
+</table>

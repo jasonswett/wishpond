@@ -14,7 +14,7 @@ class IntervalsController < ApplicationController
 
   # GET /intervals/new
   def new
-    @interval = Interval.new
+    @intervals = Interval.all
   end
 
   # GET /intervals/1/edit
